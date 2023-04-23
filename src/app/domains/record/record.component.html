@@ -1,0 +1,147 @@
+<section id="record-nav">
+  <div class="container">
+    <div class="row">
+      <div class="item pointer" (click)="scrollToMyTargetDiv('my-progress')">
+        <p class="font-25 color-p-300">BODY RECORD</p>
+        <span class="font-14 color-light">自分のカラダの記録</span>
+      </div>
+      <div class="item pointer" (click)="scrollToMyTargetDiv('my-exercise')">
+        <p class="font-25 color-p-300">MY EXERCISE</p>
+        <span class="font-14 color-light">自分の運動の記録</span>
+      </div>
+      <div class="item pointer" (click)="scrollToMyTargetDiv('my-diary')">
+        <p class="font-25 color-p-300">MY DIARY</p>
+        <span class="font-14 color-light">自分の日記</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="my-progress" >
+  <div class="container">
+    <div class="heading">
+      <span class="label font-15 color-light">BODY <br>RECORD</span>
+      <span class="date font-22 color-light">2021.05.21</span>
+    </div>
+    <app-progress-chart [dataChart]="dataChart"></app-progress-chart>
+    <div class="btn-list">
+      <span>日</span>
+      <span>週</span>
+      <span>月</span>
+      <span class="active">年</span>
+    </div>
+  </div>
+</section>
+
+<section id="my-exercise">
+  <div class="container">
+    <div class="content">
+      <div class="heading">
+        <span class="label font-15 color-light">MY <br>EXERCISE</span>
+        <span class="date font-22 color-light">2021.05.21</span>
+      </div>
+      <div class="exercise-list">
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+        <div class="item">
+          <p class="font-15 color-light">
+            家事全般（立位・軽い） <br>
+            <span class="color-p-300">26kcal</span>
+          </p>
+          <span class="font-18 color-p-300">10 min</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="my-diary">
+  <div class="container">
+    <p class="font-22">MY DIARY</p>
+    <div class="row">
+      <ng-container *ngIf="diaryLoading">
+        <app-loading></app-loading>
+      </ng-container>
+      <ng-container *ngIf="!diaryLoading">
+        <div *ngFor="let item of diaryItems" class="item">
+          <h5 class="font-18">{{ item.date }} <br>{{ item.time }}</h5>
+          <p class="font-15">{{ item.text }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="flex-center-around load-more">
+    <button class="btn pointer">記録をもっと見る</button>
+  </div>
+</section>
+
+

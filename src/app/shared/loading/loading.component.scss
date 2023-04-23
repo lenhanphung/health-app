@@ -1,0 +1,22 @@
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_util.scss";
+
+.loader{
+  height: 200px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+  vertical-align: top;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: $primary-300;
+}

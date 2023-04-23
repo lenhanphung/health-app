@@ -1,0 +1,122 @@
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_util.scss";
+#filter {
+  margin: 56px 0;
+  .container {
+    .row {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+      .item {
+        width: calc(25% - 32px);
+        margin: 0 16px;
+        text-align: center;
+        background: $dark-600;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding: 24px 10px;
+        p {
+          margin: 0 0 10px;
+          line-height: 27px;
+        }
+        span {
+          position: relative;
+          padding: 11px 0 0;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 56px;
+            margin-left: -28px;
+            height: 1px;
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+#recommended-items {
+  .container {
+    .row {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      margin: 0 -4px;
+      flex-wrap: wrap;
+      .item {
+        width: calc(25% - 8px);
+        margin: 0 4px 18px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        .image {
+          width: 100%;
+          aspect-ratio: 1;
+          position: relative;
+          background-position: top center;
+          display: flex;
+          align-items: flex-end;
+          .time {
+            background: $primary-300;
+            padding: 3px 8px;
+            min-width: 145px;
+            display: flex;
+            justify-content: space-between;
+            span {
+              font-size: 15px;
+              color: #fff;
+            }
+          }
+        }
+        p {
+          margin: 8px 0 5px;
+          a {
+            color: $dark-600;
+            font-family: "Hiragino";
+          }
+        }
+        .tags {
+          span {
+            display: inline-block;
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #filter .container .row .item {
+    width: calc(50% - 32px);
+    margin: 0 16px 15px;
+    p {
+      width: 100%;
+    }
+  }
+  #recommended-items .container .row .item {
+    width: calc(50% - 8px);
+  }
+}
+@media screen and (max-width: 768px) {
+  #filter .container .row .item {
+    padding: 10px 10px;
+    width: calc(100% - 32px);
+    p {
+      line-height: 20px;
+      font-size: 14px;
+    }
+    span {
+      font-size: 12px
+    }
+  }
+}
+
+

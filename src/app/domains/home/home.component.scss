@@ -1,0 +1,23 @@
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_util.scss";
+#section-progress {
+  display: flex;
+  app-progress {
+    width: 45%;
+  }
+  app-progress-chart {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #section-progress {
+    flex-direction: column;
+    app-progress {
+      width: 100%;
+    }
+    app-progress-chart {
+      width: 100%;
+    }
+  }
+}

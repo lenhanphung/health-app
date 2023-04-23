@@ -1,0 +1,36 @@
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_util.scss";
+.progress {
+  background-image: url('/assets/images/main_photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 315px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 220px 0 0;
+  &--chart {
+    max-width: 180px;
+    position: relative;
+    &--information {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      span {
+        text-shadow: 0px 0px 6px #FCA500;
+      }
+      small {
+        margin-right: 5px;
+        text-shadow: 0px 0px 6px #FCA500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .progress {
+    justify-content: space-around;
+    padding: 0;
+  }
+}

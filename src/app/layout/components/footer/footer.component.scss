@@ -1,0 +1,27 @@
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_util.scss";
+.scroll-top {
+  position: fixed;
+  top: calc(20% + 350px);
+  left: calc(50% + 500px);
+}
+footer {
+  background: $dark-500;
+  ul {
+    padding: 54px 0;
+    li {
+      margin-right: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    ul {
+      flex-wrap: wrap;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

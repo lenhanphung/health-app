@@ -1,0 +1,40 @@
+<header>
+  <div class="container flex-center-between">
+    <div class="logo">
+      <a routerLink="/"><img src="/assets/images/logo.svg" alt="Logo"></a>
+    </div>
+    <nav class="flex-center-between">
+      <ul class="flex-center-between font-16">
+        <li class="flex-center-start">
+          <a class="flex-center-between color-light" routerLink="/record" routerLinkActive="active">
+            <img src="/assets/images/icon_memo.svg" alt="">
+            <span>自分の記録</span>
+          </a>
+        </li>
+        <li class="flex-center-start">
+          <a class="flex-center-between color-light" routerLink="/haha" routerLinkActive="active">
+            <img src="/assets/images/icon_challenge.svg" alt="">
+            <span>チャレンジ</span>
+          </a>
+        </li>
+        <li class="flex-center-start">
+          <a class="flex-center-between color-light" routerLink="/haha" routerLinkActive="active">
+            <img src="/assets/images/icon_info.svg" alt="">
+            <span>お知らせ</span>
+          </a>
+        </li>
+      </ul>
+      <div #hamburger class="hamburger-menu pointer" (click)="toggleMenu()">
+        <img src="/assets/images/icon_menu.svg" alt="">
+        <div class="menu-dropdown" [class.active]="isMenuActive">
+          <a routerLink="/record">自分の記録</a>
+          <a routerLink="/">体重グラフ</a>
+          <a routerLink="/">目標</a>
+          <a routerLink="/">選択中のコース</a>
+          <a routerLink="/recommender">コラム一覧</a>
+          <a routerLink="/">設定</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

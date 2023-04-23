@@ -1,0 +1,28 @@
+<ng-container>
+  <div class="container">
+    <div class="filter-menu">
+      <ul class="flex-center-between">
+        <li class="font-20 color-light pointer" *ngFor="let item of filterMenu" (click)="filter(item.type)">
+          <img src="/assets/images/icon_{{ item.icon }}.svg" alt="{{ item.icon }}">
+          <span>{{ item.label }}</span>
+        </li>
+      </ul>
+    </div>
+    <ng-container *ngIf="loading">
+      <app-loading></app-loading>
+    </ng-container>
+    <div class="filter-list flex-center-start">
+
+      <ng-container *ngIf="!loading">
+        <div *ngFor="let item of filterItems" class="filter-item" [style.background-image]="'url(' + item.url + ')'">
+          <span class="font-15 color-light">{{ item.date }}.{{ item.label }}</span>
+        </div>
+      </ng-container>
+
+    </div>
+    <div class="flex-center-around load-more">
+      <button class="btn pointer">記録をもっと見る</button>
+    </div>
+  </div>
+
+</ng-container>

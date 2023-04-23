@@ -1,0 +1,92 @@
+@import "src/assets/scss/_variables.scss";
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-center-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-center-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.pointer {
+  cursor: pointer;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+a {
+  text-decoration: none;
+}
+.color-light {
+  color: $light;
+}
+.color-p-300 {
+  color: $primary-300;
+}
+.color-p-400 {
+  color: $primary-400;
+}
+.color-p-500 {
+  color: $primary-500;
+}
+.color-s-500 {
+  color: $secondary-300;
+}
+.font-noto {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+.font-11 {
+  font-size: 11px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-15 {
+  font-size: 15px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-22 {
+  font-size: 22px;
+}
+.font-25 {
+  font-size: 25px;
+}
+

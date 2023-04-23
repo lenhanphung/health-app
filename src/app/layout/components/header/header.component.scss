@@ -1,0 +1,78 @@
+@import "src/assets/scss/_variables.scss";
+@import "src/assets/scss/_util.scss";
+header {
+  background-color: $dark-500;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.160784);
+  position: relative;
+  .container {
+    .logo {
+      max-height: 64px;
+    }
+    ul {
+      li {
+        min-width: 144px;
+        padding: 8px;
+        a {
+          font-family: Hiragino;
+          img {
+            margin-right: 8px;
+          }
+          &.active {
+            color: $primary-400;
+          }
+        }
+      }
+      margin-right: 15px;
+    }
+  }
+  .hamburger-menu {
+    position: relative;
+    .menu-dropdown {
+      z-index: 99;
+      position: absolute;
+      width: 280px;
+      background-color: $gray-400;
+      top: 50px;
+      right: 0;
+      transition: all 0.15s ease-in;
+      display: none;
+      animation-duration: 0.15s;
+      animation-delay: 0s;
+      a {
+        border-top: 1px solid rgba(255,255,255,0.15);
+        border-bottom: 1px solid $dark-600;
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        padding: 32px 23px;
+      }
+      &.active {
+        display: block;
+        animation-name: move;
+      }
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(20px);
+  }
+  1% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    .container {
+      ul {
+        display: none;
+      }
+    }
+  }
+}

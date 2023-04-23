@@ -1,0 +1,48 @@
+<section id="filter">
+  <div class="container">
+    <div class="row">
+      <div class="item">
+        <p class="font-22 color-p-300">RECOMMENDED <br>
+          COLUMN</p>
+        <span class="font-18 color-light">オススメ</span>
+      </div>
+      <div class="item">
+        <p class="font-22 color-p-300">RECOMMENDED <br>
+          COLUMN</p>
+        <span class="font-18 color-light">オススメ</span>
+      </div>
+      <div class="item">
+        <p class="font-22 color-p-300">RECOMMENDED <br>
+          COLUMN</p>
+        <span class="font-18 color-light">オススメ</span>
+      </div>
+      <div class="item">
+        <p class="font-22 color-p-300">RECOMMENDED <br>
+          COLUMN</p>
+        <span class="font-18 color-light">オススメ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recommended-items">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let item of data" class="item">
+        <div class="image pointer" [style.background-image]="'url(' + item.url + ')'">
+          <div class="time">
+            <span>{{ item.date }}</span>
+            <span>{{ item.time }}</span>
+          </div>
+        </div>
+        <p><a class="pointer font-15" href="#">{{ item.title }}</a></p>
+        <div class="tags">
+          <span *ngFor="let tag of item.tags" class="font-12 color-p-400">{{ tag.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-center-around load-more">
+    <button class="btn pointer">記録をもっと見る</button>
+  </div>
+</section>
